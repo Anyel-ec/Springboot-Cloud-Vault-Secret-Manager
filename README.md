@@ -54,7 +54,8 @@ Follow these steps to set up a local Vault server using Docker:
 
    **Note:** This token is only visible during initialization. If you lose it, restart the container or define a custom token using the `VAULT_DEV_ROOT_TOKEN_ID` environment variable.
 
-4. **Create secrets in Vault:**
+
+5. **Create secrets in Vault:**
 
    Access the container and create secrets:
 
@@ -64,12 +65,20 @@ Follow these steps to set up a local Vault server using Docker:
 
    This creates a secret in Vault at the path `secret/myapp` with the keys `username` and `password`.
 
-5. **Read secrets from Vault:**
+6. **Read secrets from Vault:**
 
    ```bash
    docker exec -it dev-vault vault kv get secret/myapp
    ```
 
+## *Example UI*
+   *Login*
+   ![image](https://github.com/user-attachments/assets/5fc04101-ad4e-4d68-b038-58237c94d171)
+   *Secret*
+   ![image](https://github.com/user-attachments/assets/3d55a203-07fa-43df-8ede-d7cfdefb11e3)
+   ![image](https://github.com/user-attachments/assets/a9994131-1b69-4dc1-ae09-4c05b3c793ed)
+   *Controller*
+   ![image](https://github.com/user-attachments/assets/a2c6791c-ad93-4ed2-bdf8-f1d5268ae786)
 ---
 
 ## Spring Boot Configuration
